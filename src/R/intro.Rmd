@@ -1,7 +1,7 @@
-	sayHello <- function(name) {
+sayHello <- function(name) {
     return(paste("Krzysztof,", name))
 }
 
-# Call the function sayHello with your name
+
 message <- sayHello("Your Name")
 print(message)
