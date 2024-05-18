@@ -1,1 +1,1 @@
-heartdata <- read.csv("heartdata.csv", header = TRUE, sep = "\t")
+heartdata <- read.csv("/Users/k.d.dabrowski/Downloads/heartdata.csv", header = TRUE, sep = "\t")
