@@ -23,3 +23,7 @@ model_rf <- train(X_train, y_train,  method="rf", preProcess=c("center","scale")
                   trainControl=trControl)
 
 vi <- varImp(model_rf)
+best_rf <- model_rf$finalModel
+
+y_predicted <- predict(best_rf, X_test)
+RMSE(y_predicted, y_test)
