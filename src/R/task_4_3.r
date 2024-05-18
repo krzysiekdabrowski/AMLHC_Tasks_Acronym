@@ -10,3 +10,16 @@ X_train <- X[inTrain,]
 y_train <- y[inTrain]
 X_test <- X[-inTrain,]
 y_test <- y[-inTrain]
+
+featVar <- apply(X_train, 2, var)
+length(featVar<0.001)
+featInd <- featVar>0
+
+X_train <- Xtrain[,featVar>0]
+X_test <- X_test[,featVar>0]
+
+trControl <- trainControl(method="cv", number=10)
+model_rf <- train(X_train, y_train,  method="rf", preProcess=c("center","scale"),
+                  trainControl=trControl)
+
+vi <- varImp(model_rf)
