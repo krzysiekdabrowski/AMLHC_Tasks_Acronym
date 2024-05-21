@@ -9,7 +9,7 @@ qqnorm(residuals(model))
 qqline(residuals(model), col = "red")
 plot(fitted(model), residuals(model), main = "Residuals vs Fitted", xlab = "Fitted Values", ylab = "Residuals")
 abline(h = 0, col = "red")
-
+ 
 
 model <- lm(heartdisease ~ biking + smoking, data = heartdata)
 
