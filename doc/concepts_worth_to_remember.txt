@@ -1,0 +1,4 @@
+- learning method such as random forest
+- preprocessing (scaling/centering) 
+- tuning grid for your model
+- confusion matrix and performance measures
