@@ -21,4 +21,5 @@ train_model <- train(class ~ .,
                      family = "binomial",
                      trControl = train_control)
 
+
 print(train_model)
